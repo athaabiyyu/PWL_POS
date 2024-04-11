@@ -14,6 +14,9 @@ Route::get('/level', [LevelController::class, 'index']);
 Route::get('/kategori', [KategoriController::class, 'index']);
 Route::get('/kategori/create', [KategoriController::class, 'create']);
 Route::post('/kategori', [KategoriController::class, 'store']);
+Route::get('/kategori/edit_view/{kategori:kategori_kode}', [KategoriController::class, 'viewEdit']);
+Route::put('/kategori/edit/{kategori:kategori_kode}', [KategoriController::class, 'edit']);
+Route::get('/kategori/delete/{kategori:kategori_kode}', [KategoriController::class, 'delete']);
 
 Route::get('/user', [UserController::class, 'index']);
 Route::get('/user/tambah', [UserController::class, 'tambah']);
