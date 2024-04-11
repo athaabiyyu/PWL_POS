@@ -322,6 +322,12 @@ return [
             'label' => 4,
             'label_color' => 'success',
         ],
+        [
+            'text' => 'Manage Category',
+            'url' => 'kategori/create',
+            'icon' => 'fas fa-fw fa-plus',
+        ],
+        
         ['header' => 'account_settings'],
         [
             'text' => 'profile',
