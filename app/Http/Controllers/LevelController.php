@@ -26,4 +26,8 @@ class LevelController extends Controller
         $data = DB::select('select * from m_level');
         return view('level', ['data' => $data]);
     }
+
+    public function form() {
+        return view('form.level_form');
+    }
 }
