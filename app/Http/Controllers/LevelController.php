@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\LevelRequest;
 
 class LevelController extends Controller
 {
@@ -27,7 +28,17 @@ class LevelController extends Controller
         return view('level', ['data' => $data]);
     }
 
-    public function form() {
+    public function tambah() {
         return view('form.level_form');
+    }
+
+    public function tambah_simpan(LevelRequest $request): RedirectResponse {
+        // mengambil validasi inout data
+        $validated = $request->validated();
+
+        // mengambil sebuah bagian dari validasi input data
+        $validated = $request->safe();
+
+        return redirect('/level');
     }
 }

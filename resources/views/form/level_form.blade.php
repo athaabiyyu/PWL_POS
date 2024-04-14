@@ -16,15 +16,26 @@
                </div>
                <!-- /.card-header -->
                <!-- form start -->
-               <form id="quickForm">
+               @if ($errors->any())
+               <div class="alert alert-danger">
+                    <ul>
+                         @foreach ($errors->all() as $error)
+                              <li>{{ $error }}</li>
+                         @endforeach
+                    </ul>
+               </div>
+               @endif
+               <!-- form start -->
+               <form id="quickForm" method="post" action="../level/tambah_simpan">
+                    @csrf
                <div class="card-body">
                     <div class="form-group">
-                    <label for="exampleInputEmail1">Kode Level</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Kode Level">
+                    <label for="kodeLevel">Kode Level</label>
+                    <input type="text" name="level_kode" class="form-control" id="level_kode" placeholder="Masukkan Kode Level">
                     </div>
                     <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Level</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Level">
+                    <label for="namaLevel">Nama Level</label>
+                    <input type="text" name="level_nama" class="form-control" id="level_nama" placeholder="Masukkan Nama Level">
                     </div>
                     <div class="form-group mb-0">
                     <div class="custom-control custom-checkbox">
