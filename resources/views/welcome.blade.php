@@ -1,190 +1,4 @@
-@extends('adminlte::page')
-@section('title', 'Dashboard')
-@section('content_header')
-    <h1>Dashboard</h1>
-@stop
-
-@section('content')
-    <div class="card-body">
-        <div class="card card-warning">
-            <div class="card-header">
-                <h3 class="card-title">General Elements</h3>
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body">
-                <form>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <!-- text input -->
-                            <div class="form-group">
-                                <label>Text</label>
-                                <input type="text" class="form-control" placeholder="Enter ...">
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label>Text Disabled</label>
-                                <input type="text" class="form-control" placeholder="Enter ..."
-                                    disabled>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <!-- textarea -->
-                            <div class="form-group">
-                                <label>Textarea</label>
-                                <textarea class="form-control" rows="3"
-                                    placeholder="Enter ..."></textarea>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label>Textarea Disabled</label>
-                                <textarea class="form-control" rows="3" placeholder="Enter ..."
-                                    disabled></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- input states -->
-                    <div class="form-group">
-                        <label class="col-form-label" for="inputSuccess"><i
-                                class="fas fa-check"></i> Input with
-                            success</label>
-                        <input type="text" class="form-control is-valid" id="inputSuccess"
-                            placeholder="Enter ...">
-                    </div>
-                    <div class="form-group">
-                        <label class="col-form-label" for="inputWarning"><i class="far fa-bell"></i>
-                            Input with
-                            warning</label>
-                        <input type="text" class="form-control is-warning" id="inputWarning"
-                            placeholder="Enter ...">
-                    </div>
-                    <div class="form-group">
-                        <label class="col-form-label" for="inputError"><i
-                                class="far fa-times-circle"></i> Input with
-                            error</label>
-                        <input type="text" class="form-control is-invalid" id="inputError"
-                            placeholder="Enter ...">
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <!-- checkbox -->
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label">Checkbox</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" checked>
-                                    <label class="form-check-label">Checkbox checked</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" disabled>
-                                    <label class="form-check-label">Checkbox disabled</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <!-- radio -->
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radio1">
-                                    <label class="form-check-label">Radio</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radio1"
-                                        checked>
-                                    <label class="form-check-label">Radio checked</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" disabled>
-                                    <label class="form-check-label">Radio disabled</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <!-- select -->
-                            <div class="form-group">
-                                <label>Select</label>
-                                <select class="form-control">
-                                    <option>option 1</option>
-                                    <option>option 2</option>
-                                    <option>option 3</option>
-                                    <option>option 4</option>
-                                    <option>option 5</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label>Select Disabled</label>
-                                <select class="form-control" disabled>
-                                    <option>option 1</option>
-                                    <option>option 2</option>
-                                    <option>option 3</option>
-                                    <option>option 4</option>
-                                    <option>option 5</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <!-- Select multiple-->
-                            <div class="form-group">
-                                <label>Select Multiple</label>
-                                <select multiple class="form-control">
-                                    <option>option 1</option>
-                                    <option>option 2</option>
-                                    <option>option 3</option>
-                                    <option>option 4</option>
-                                    <option>option 5</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label>Select Multiple Disabled</label>
-                                <select multiple class="form-control" disabled>
-                                    <option>option 1</option>
-                                    <option>option 2</option>
-                                    <option>option 3</option>
-                                    <option>option 4</option>
-                                    <option>option 5</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-        </div>
-    </div>
-@stop
-
-@section('css')
-    {{-- Add here extra stylesheets --}}
-    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
-@stop
-
-@section('js')
-    <script>
-        console.log("Hi, I'm using the Laravel-AdminLTE package!");
-    </script>
-@stop
-
-
-{{-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -193,13 +7,13 @@
     <title>AdminLTE 3 | Dashboard 2</title>
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="{{ asset ('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback') }}">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="{{ asset ('template/plugins/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset ('adminlte/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="{{ asset ('template/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+    <link rel="stylesheet" href="{{ asset ('adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset ('template/dist/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{ asset ('adminlte/dist/css/adminlte.min.css') }}">
 </head>
 
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
@@ -207,7 +21,7 @@
 
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__wobble" src="{{ asset ('template/dist/img/AdminLTELogo.png') }}" alt="AdminLTELogo" height="60"
+            <img class="animation__wobble" src="{{ asset ('adminlte/dist/img/AdminLTELogo.png') }}" alt="AdminLTELogo" height="60"
                 width="60">
         </div>
 
@@ -262,7 +76,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="{{ asset ('template/dist/img/user1-128x128.jpg') }}" alt="User Avatar"
+                                <img src="{{ asset ('adminlte/dist/img/user1-128x128.jpg') }}" alt="User Avatar"
                                     class="img-size-50 mr-3 img-circle">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
@@ -279,7 +93,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="{{ asset ('template/dist/img/user8-128x128.jpg') }}" alt="User Avatar"
+                                <img src="{{ asset ('adminlte/dist/img/user8-128x128.jpg') }}" alt="User Avatar"
                                     class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
@@ -296,7 +110,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="{{ asset ('template/dist/img/user3-128x128.jpg') }}" alt="User Avatar"
+                                <img src="{{ asset ('adminlte/dist/img/user3-128x128.jpg') }}" alt="User Avatar"
                                     class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
@@ -360,7 +174,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
-                <img src="{{ asset ('template/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                <img src="{{ asset ('adminlte/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                     style="opacity: .8">
                 <span class="brand-text font-weight-light">AdminLTE 3</span>
             </a>
@@ -370,7 +184,7 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="{{ asset ('template/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
+                        <img src="{{ asset ('adminlte/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
                         <a href="#" class="d-block">Alexander Pierce</a>
@@ -406,7 +220,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="./index.html" class="nav-link">
+                                    <a href="../adminlte/index.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Dashboard v1</p>
                                     </a>
@@ -1353,11 +1167,11 @@
                                                             pm</span>
                                                     </div>
                                                     <!-- /.direct-chat-infos -->
-                                                    <img class="direct-chat-img" src="{{ asset ('template/dist/img/user1-128x128.jpg') }}"
+                                                    <img class="direct-chat-img" src="{{ asset ('adminlte/dist/img/user1-128x128.jpg') }}"
                                                         alt="message user image">
                                                     <!-- /.direct-chat-img -->
                                                     <div class="direct-chat-text">
-                                                        Is this template really for free? That's unbelievable!
+                                                        Is this adminlte really for free? That's unbelievable!
                                                     </div>
                                                     <!-- /.direct-chat-text -->
                                                 </div>
@@ -1371,7 +1185,7 @@
                                                             pm</span>
                                                     </div>
                                                     <!-- /.direct-chat-infos -->
-                                                    <img class="direct-chat-img" src="{{ asset ('template/dist/img/user3-128x128.jpg') }}"
+                                                    <img class="direct-chat-img" src="{{ asset ('adminlte/dist/img/user3-128x128.jpg') }}"
                                                         alt="message user image">
                                                     <!-- /.direct-chat-img -->
                                                     <div class="direct-chat-text">
@@ -1390,7 +1204,7 @@
                                                             pm</span>
                                                     </div>
                                                     <!-- /.direct-chat-infos -->
-                                                    <img class="direct-chat-img" src="{{ asset ('template/dist/img/user1-128x128.jpg') }}"
+                                                    <img class="direct-chat-img" src="{{ asset ('adminlte/dist/img/user1-128x128.jpg') }}"
                                                         alt="message user image">
                                                     <!-- /.direct-chat-img -->
                                                     <div class="direct-chat-text">
@@ -1408,7 +1222,7 @@
                                                             pm</span>
                                                     </div>
                                                     <!-- /.direct-chat-infos -->
-                                                    <img class="direct-chat-img" src="{{ asset ('template/dist/img/user3-128x128.jpg') }}"
+                                                    <img class="direct-chat-img" src="{{ asset ('adminlte/dist/img/user3-128x128.jpg') }}"
                                                         alt="message user image">
                                                     <!-- /.direct-chat-img -->
                                                     <div class="direct-chat-text">
@@ -1427,7 +1241,7 @@
                                                     <li>
                                                         <a href="#">
                                                             <img class="contacts-list-img"
-                                                                src="{{ asset ('template/dist/img/user1-128x128.jpg') }}" alt="User Avatar">
+                                                                src="{{ asset ('adminlte/dist/img/user1-128x128.jpg') }}" alt="User Avatar">
 
                                                             <div class="contacts-list-info">
                                                                 <span class="contacts-list-name">
@@ -1445,7 +1259,7 @@
                                                     <li>
                                                         <a href="#">
                                                             <img class="contacts-list-img"
-                                                                src="{{ asset ('template/dist/img/user7-128x128.jpg') }}" alt="User Avatar">
+                                                                src="{{ asset ('adminlte/dist/img/user7-128x128.jpg') }}" alt="User Avatar">
 
                                                             <div class="contacts-list-info">
                                                                 <span class="contacts-list-name">
@@ -1463,7 +1277,7 @@
                                                     <li>
                                                         <a href="#">
                                                             <img class="contacts-list-img"
-                                                                src="{{ asset ('template/dist/img/user3-128x128.jpg') }}" alt="User Avatar">
+                                                                src="{{ asset ('adminlte/dist/img/user3-128x128.jpg') }}" alt="User Avatar">
 
                                                             <div class="contacts-list-info">
                                                                 <span class="contacts-list-name">
@@ -1481,7 +1295,7 @@
                                                     <li>
                                                         <a href="#">
                                                             <img class="contacts-list-img"
-                                                                src="{{ asset ('template/dist/img/user5-128x128.jpg') }}" alt="User Avatar">
+                                                                src="{{ asset ('adminlte/dist/img/user5-128x128.jpg') }}" alt="User Avatar">
 
                                                             <div class="contacts-list-info">
                                                                 <span class="contacts-list-name">
@@ -1499,7 +1313,7 @@
                                                     <li>
                                                         <a href="#">
                                                             <img class="contacts-list-img"
-                                                                src="{{ asset ('template/dist/img/user6-128x128.jpg') }}" alt="User Avatar">
+                                                                src="{{ asset ('adminlte/dist/img/user6-128x128.jpg') }}" alt="User Avatar">
 
                                                             <div class="contacts-list-info">
                                                                 <span class="contacts-list-name">
@@ -1517,7 +1331,7 @@
                                                     <li>
                                                         <a href="#">
                                                             <img class="contacts-list-img"
-                                                                src="{{ asset ('template/dist/img/user8-128x128.jpg') }}" alt="User Avatar">
+                                                                src="{{ asset ('adminlte/dist/img/user8-128x128.jpg') }}" alt="User Avatar">
 
                                                             <div class="contacts-list-info">
                                                                 <span class="contacts-list-name">
@@ -1577,42 +1391,42 @@
                                         <div class="card-body p-0">
                                             <ul class="users-list clearfix">
                                                 <li>
-                                                    <img src="{{ asset ('template/dist/img/user1-128x128.jpg') }}" alt="User Image">
+                                                    <img src="{{ asset ('adminlte/dist/img/user1-128x128.jpg') }}" alt="User Image">
                                                     <a class="users-list-name" href="#">Alexander Pierce</a>
                                                     <span class="users-list-date">Today</span>
                                                 </li>
                                                 <li>
-                                                    <img src="{{ asset ('template/dist/img/user8-128x128.jpg') }}" alt="User Image">
+                                                    <img src="{{ asset ('adminlte/dist/img/user8-128x128.jpg') }}" alt="User Image">
                                                     <a class="users-list-name" href="#">Norman</a>
                                                     <span class="users-list-date">Yesterday</span>
                                                 </li>
                                                 <li>
-                                                    <img src="{{ asset ('template/dist/img/user7-128x128.jpg') }}" alt="User Image">
+                                                    <img src="{{ asset ('adminlte/dist/img/user7-128x128.jpg') }}" alt="User Image">
                                                     <a class="users-list-name" href="#">Jane</a>
                                                     <span class="users-list-date">12 Jan</span>
                                                 </li>
                                                 <li>
-                                                    <img src="{{ asset ('template/dist/img/user6-128x128.jpg') }}" alt="User Image">
+                                                    <img src="{{ asset ('adminlte/dist/img/user6-128x128.jpg') }}" alt="User Image">
                                                     <a class="users-list-name" href="#">John</a>
                                                     <span class="users-list-date">12 Jan</span>
                                                 </li>
                                                 <li>
-                                                    <img src="{{ asset ('template/dist/img/user2-160x160.jpg') }}" alt="User Image">
+                                                    <img src="{{ asset ('adminlte/dist/img/user2-160x160.jpg') }}" alt="User Image">
                                                     <a class="users-list-name" href="#">Alexander</a>
                                                     <span class="users-list-date">13 Jan</span>
                                                 </li>
                                                 <li>
-                                                    <img src="{{ asset ('template/dist/img/user5-128x128.jpg') }}" alt="User Image">
+                                                    <img src="{{ asset ('adminlte/dist/img/user5-128x128.jpg') }}" alt="User Image">
                                                     <a class="users-list-name" href="#">Sarah</a>
                                                     <span class="users-list-date">14 Jan</span>
                                                 </li>
                                                 <li>
-                                                    <img src="{{ asset ('template/dist/img/user4-128x128.jpg') }}" alt="User Image">
+                                                    <img src="{{ asset ('adminlte/dist/img/user4-128x128.jpg') }}" alt="User Image">
                                                     <a class="users-list-name" href="#">Nora</a>
                                                     <span class="users-list-date">15 Jan</span>
                                                 </li>
                                                 <li>
-                                                    <img src="{{ asset ('template/dist/img/user3-128x128.jpg') }}" alt="User Image">
+                                                    <img src="{{ asset ('adminlte/dist/img/user3-128x128.jpg') }}" alt="User Image">
                                                     <a class="users-list-name" href="#">Nadia</a>
                                                     <span class="users-list-date">15 Jan</span>
                                                 </li>
@@ -1871,7 +1685,7 @@
                                     <ul class="products-list product-list-in-card pl-2 pr-2">
                                         <li class="item">
                                             <div class="product-img">
-                                                <img src="{{ asset ('template/dist/img/default-150x150.png') }}" alt="Product Image"
+                                                <img src="{{ asset ('adminlte/dist/img/default-150x150.png') }}" alt="Product Image"
                                                     class="img-size-50">
                                             </div>
                                             <div class="product-info">
@@ -1885,7 +1699,7 @@
                                         <!-- /.item -->
                                         <li class="item">
                                             <div class="product-img">
-                                                <img src="{{ asset ('template/dist/img/default-150x150.png') }}" alt="Product Image"
+                                                <img src="{{ asset ('adminlte/dist/img/default-150x150.png') }}" alt="Product Image"
                                                     class="img-size-50">
                                             </div>
                                             <div class="product-info">
@@ -1899,7 +1713,7 @@
                                         <!-- /.item -->
                                         <li class="item">
                                             <div class="product-img">
-                                                <img src="{{ asset ('template/dist/img/default-150x150.png') }}" alt="Product Image"
+                                                <img src="{{ asset ('adminlte/dist/img/default-150x150.png') }}" alt="Product Image"
                                                     class="img-size-50">
                                             </div>
                                             <div class="product-info">
@@ -1916,7 +1730,7 @@
                                         <!-- /.item -->
                                         <li class="item">
                                             <div class="product-img">
-                                                <img src="{{ asset ('template/dist/img/default-150x150.png') }}" alt="Product Image"
+                                                <img src="{{ asset ('adminlte/dist/img/default-150x150.png') }}" alt="Product Image"
                                                     class="img-size-50">
                                             </div>
                                             <div class="product-info">
@@ -1966,28 +1780,28 @@
 
     <!-- REQUIRED SCRIPTS -->
     <!-- jQuery -->
-    <script src="{{ asset ('template/plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset ('adminlte/plugins/jquery/jquery.min.js') }}"></script>
     <!-- Bootstrap -->
-    <script src="{{ asset ('template/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset ('adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- overlayScrollbars -->
-    <script src="{{ asset ('template/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+    <script src="{{ asset ('adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
     <!-- AdminLTE App -->
-    <script src="{{ asset ('template/dist/js/adminlte.js') }}"></script>
+    <script src="{{ asset ('adminlte/dist/js/adminlte.js') }}"></script>
 
     <!-- PAGE PLUGINS -->
     <!-- jQuery Mapael -->
-    <script src="{{ asset ('template/plugins/jquery-mousewheel/jquery.mousewheel.js') }}"></script>
-    <script src="{{ asset ('template/plugins/raphael/raphael.min.js') }}"></script>
-    <script src="{{ asset ('template/plugins/jquery-mapael/jquery.mapael.min.js') }}"></script>
-    <script src="{{ asset ('template/plugins/jquery-mapael/maps/usa_states.min.js') }}"></script>
+    <script src="{{ asset ('adminlte/plugins/jquery-mousewheel/jquery.mousewheel.js') }}"></script>
+    <script src="{{ asset ('adminlte/plugins/raphael/raphael.min.js') }}"></script>
+    <script src="{{ asset ('adminlte/plugins/jquery-mapael/jquery.mapael.min.js') }}"></script>
+    <script src="{{ asset ('adminlte/plugins/jquery-mapael/maps/usa_states.min.js') }}"></script>
     <!-- ChartJS -->
-    <script src="{{ asset ('template/plugins/chart.js/Chart.min.js') }}"></script>
+    <script src="{{ asset ('adminlte/plugins/chart.js/Chart.min.js') }}"></script>
 
     <!-- AdminLTE for demo purposes -->
-    <script src="{{ asset ('template/dist/js/demo.js') }}"></script>
+    <script src="{{ asset ('adminlte/dist/js/demo.js') }}"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="{{ asset ('template/dist/js/pages/dashboard2.js') }}"></script>
+    <script src="{{ asset ('adminlte/dist/js/pages/dashboard2.js') }}"></script>
 </body>
 
 </html>
- --}}
+
