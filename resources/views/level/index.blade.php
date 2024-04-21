@@ -4,7 +4,7 @@
           <div class="card-header">
                <h3 class="card-title">{{ $page->title }}</h3>
                <div class="card-tools">
-                    <a class="btn btn-sm btn-primary mt-1" href="{{ url('kategori/create') }}">Tambah</a>
+                    <a class="btn btn-sm btn-primary mt-1" href="{{ url('level/create') }}">Tambah</a>
                </div>
           </div>
 
@@ -20,20 +20,20 @@
                     <div class="form-group row mt-3">
                          <label class="col-1 control-label col-form-label ml-3">Filter:</label>
                          <div class="col-3">
-                              <select class="form-control" name="kategori_id" id="kategori_id" required>
+                              <select class="form-control" name="level_id" id="level_id" required>
                                    <option value="">- Semua -</option>
-                                   @foreach ($kategori as $item)
-                                        <option value="{{ $item->kategori_id }}">{{ $item->kategori_nama }}</option>
+                                   @foreach ($level as $item)
+                                        <option value="{{ $item->level_id }}">{{ $item->level_nama }}</option>
                                    @endforeach
                               </select>
-                              <small class="form-text text-muted">Kategori</small>
+                              <small class="form-text text-muted">Level Pengguna</small>
                          </div>
                     </div>
                </div>
           </div>
 
           <div class="card-body">
-               <table class="table table-bordered table-striped table-hover table-sm" id="table_kategori">
+               <table class="table table-bordered table-striped table-hover table-sm" id="table_level">
                     <thead>
                          <tr>
                          <th>ID</th>
@@ -53,14 +53,14 @@
 @push('js')
      <script>
           $(document).ready(function() {
-               var datakategori = $('#table_kategori').DataTable({
+               var datalevel = $('#table_level').DataTable({
                     serverSide: true, // serverSide: true, jika ingin menggunakan server side processing
                     ajax: {
-                         "url": "{{ url('kategori/list') }}",
+                         "url": "{{ url('level/list') }}",
                          "dataType": "json",
                          "type": "POST",
                          "data": function (d) {
-                              d.kategori_id = $('#kategori_id').val();
+                              d.level_id = $('#level_id').val();
                          }
                     },
                     columns: [{
@@ -69,12 +69,12 @@
                          orderable: false,
                          searchable: false
                     }, {
-                         data: "kategori_kode",
+                         data: "level_kode",
                          className: "",
                          orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
                          searchable: true // searchable: true, jika ingin kolom ini bisa dicari
                     }, {
-                         data: "kategori_nama",
+                         data: "level_nama",
                          className: "",
                          orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
                          searchable: true // searchable: true, jika ingin kolom ini bisa dicari
@@ -86,8 +86,8 @@
                     }]
                });
 
-               $('#kategori_id').on('change', function() {
-                    datakategori.ajax.reload();
+               $('#level_id').on('change', function() {
+                    datalevel.ajax.reload();
                });
           });
      </script>
