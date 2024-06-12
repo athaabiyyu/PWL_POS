@@ -13,6 +13,14 @@ class UserModel extends Authenticatable
 {
     use Notifiable;
 
+    public function getJWTIdentifier() {
+        return $this->getKey();
+    }
+
+    public function getJWTCustomClaims() {
+        return [];
+    }
+
     protected $table = 'm_user';
     public $timestamps = false;
     protected $primaryKey = 'user_id';
